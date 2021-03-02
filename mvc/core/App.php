@@ -2,7 +2,7 @@
     class App{
         // set default mvc
         protected $controller="Home";
-        protected $action="SayHi";
+        protected $action="Index";
         protected $params=[];
 
         // hàm tự chạy

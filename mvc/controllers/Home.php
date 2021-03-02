@@ -1,9 +1,17 @@
 <?php
     class Home extends Controller{
-        function SayHi() {
+        function Index() {
             // models
             $SinhVien = $this->model("SinhVienModel");
-            echo $SinhVien->GetSV();
+            $data = $SinhVien->GetSV();
+            $view = $this->view("Layout1", [
+                "SinhVien" => $data,
+                "Page" => "news"
+            ]);
+            echo $view;
+            // while($row = mysqli_fetch_array($data)) {
+            //     echo $row["hoten"]."<br/>";
+            // }
 
             // views
             
