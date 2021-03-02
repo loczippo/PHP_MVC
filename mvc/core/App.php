@@ -22,7 +22,7 @@
             // xử lý actional
             // isset kiểm tra có tồn tại không
             if( isset($arr[1]) ){
-                // kiểm tra phương thức có tồn tại trong controller không
+                // method_exists kiểm tra phương thức có tồn tại trong controller không
                 if( method_exists($this->controller, $arr[1]) ){
                     $this->action = $arr[1];
                 }
